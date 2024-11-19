@@ -58,6 +58,7 @@ const questions = [
 
 let currentQuestionIndex = 0;
 let score = 0;
+const userAnswers = [];
 
 const questionText = document.getElementById("question-text");
 const optionsContainer = document.getElementById("options-container");
@@ -85,6 +86,8 @@ nextButton.addEventListener("click", () => {
 
     const userAnswer = selectedOption.value;
     const correctAnswer = questions[currentQuestionIndex].answer;
+    userAnswers.push({ question: questions[currentQuestionIndex].question, userAnswer, correctAnswer });
+
     if (userAnswer === correctAnswer) {
         score++;
     }
@@ -99,8 +102,40 @@ nextButton.addEventListener("click", () => {
 
 function displayResult() {
     document.getElementById("quiz-box").style.display = "none";
-    resultDiv.innerText = `You scored ${score} out of ${questions.length}!`;
+    resultDiv.innerHTML = `
+        <div class="result-container">
+            <h2>🎉 Quiz Completed! 🎉</h2>
+            <p class="score">You scored <span>${score}</span> out of <span>${questions.length}</span>.</p>
+            <h3>Answer Summary:</h3>
+            <div class="answer-summary">
+                ${userAnswers
+                    .map(
+                        (entry, index) => `
+                            <div class="answer-card">
+                                <h4>Q${index + 1}: ${entry.question}</h4>
+                                <p>
+                                    <strong>Your Answer:</strong> ${entry.userAnswer} ${
+                            entry.userAnswer === entry.correctAnswer
+                                ? '<span class="correct">(Correct)</span>'
+                                : `<span class="wrong">(Wrong)</span>`
+                        }
+                                </p>
+                                ${
+                                    entry.userAnswer !== entry.correctAnswer
+                                        ? `<p class="correct-answer">
+                                            <strong>Correct Answer:</strong> ${entry.correctAnswer}
+                                          </p>`
+                                        : ""
+                                }
+                            </div>
+                        `
+                    )
+                    .join("")}
+            </div>
+        </div>
+    `;
 }
+
 
 // Load the first question initially
 loadQuestion();
