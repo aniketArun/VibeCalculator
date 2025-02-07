@@ -1,205 +1,280 @@
-const questions =  [
+const questions = [
     {
-        question: "What is Django?",
+        question: "What is the primary function of an operating system?",
         options: [
-            "A front-end framework",
-            "A Python-based web framework",
-            "A JavaScript library",
-            "A database system"
+            "To perform calculations",
+            "To manage hardware and software resources",
+            "To compile code",
+            "To manage user accounts"
         ],
-        answer: "A Python-based web framework"
+        answer: "To manage hardware and software resources"
     },
     {
-        question: "What architectural pattern does Django follow?",
-        options: ["MVC", "MVT", "MVVM", "MVP"],
-        answer: "MVT"
-    },
-    {
-        question: "Which command is used to start a new Django project?",
+        question: "What does CPU stand for?",
         options: [
-            "django-admin startproject",
-            "python manage.py startproject",
-            "django-admin startapp",
-            "python manage.py startapp"
+            "Central Process Unit",
+            "Central Processing Unit",
+            "Central Programming Unit",
+            "Core Processing Unit"
         ],
-        answer: "django-admin startproject"
+        answer: "Central Processing Unit"
     },
     {
-        question: "What file in a Django app defines the URL configurations?",
-        options: ["urls.py", "views.py", "settings.py", "models.py"],
-        answer: "urls.py"
+        question: "Which data structure uses a LIFO (Last In, First Out) approach?",
+        options: ["Queue", "Stack", "Array", "Linked List"],
+        answer: "Stack"
     },
     {
-        question: "Which file contains the database configurations in a Django project?",
-        options: ["settings.py", "models.py", "database.py", "urls.py"],
-        answer: "settings.py"
-    },
-    {
-        question: "What is the default database used by Django?",
-        options: ["MySQL", "PostgreSQL", "SQLite", "MongoDB"],
-        answer: "SQLite"
-    },
-    {
-        question: "Which command is used to create a new app in Django?",
+        question: "What is the full form of HTTP?",
         options: [
-            "django-admin startapp",
-            "python manage.py startproject",
-            "django-admin createapp",
-            "python manage.py startapp"
+            "HyperText Transfer Protocol",
+            "Hyper Transfer Text Protocol",
+            "HyperText Transmission Protocol",
+            "Hyper Transfer Transmission Protocol"
         ],
-        answer: "python manage.py startapp"
+        answer: "HyperText Transfer Protocol"
     },
     {
-        question: "What is a Django model?",
+        question: "What does SQL stand for?",
         options: [
-            "A blueprint for the database",
-            "A template for rendering HTML",
-            "A function for handling requests",
-            "A file for managing URLs"
+            "Structured Query Language",
+            "System Query Language",
+            "Sequential Query Language",
+            "Syntax Query Language"
         ],
-        answer: "A blueprint for the database"
+        answer: "Structured Query Language"
     },
     {
-        question: "Which Django command applies migrations to the database?",
+        question: "Which sorting algorithm is the fastest in the average case?",
+        options: ["Bubble Sort", "Merge Sort", "Quick Sort", "Insertion Sort"],
+        answer: "Quick Sort"
+    },
+    {
+        question: "What is the primary key in a database?",
         options: [
-            "python manage.py makemigrations",
-            "python manage.py migrate",
-            "python manage.py syncdb",
-            "python manage.py dbsync"
+            "A unique identifier for a record",
+            "A field used for searching",
+            "A key to encrypt data",
+            "A column that stores binary data"
         ],
-        answer: "python manage.py migrate"
+        answer: "A unique identifier for a record"
     },
     {
-        question: "What is the purpose of the `settings.py` file in Django?",
+        question: "What is the time complexity of a binary search algorithm?",
+        options: ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
+        answer: "O(log n)"
+    },
+    {
+        question: "What is the purpose of the OSI model in networking?",
         options: [
-            "Defining database models",
-            "Managing application URLs",
-            "Configuring project settings",
-            "Rendering templates"
+            "To provide a framework for understanding network architecture",
+            "To encrypt network data",
+            "To manage server resources",
+            "To standardize programming languages"
         ],
-        answer: "Configuring project settings"
+        answer: "To provide a framework for understanding network architecture"
     },
     {
-        question: "Which template engine is used by default in Django?",
-        options: ["Jinja2", "Mako", "Django Template Language", "Mustache"],
-        answer: "Django Template Language"
+        question: "Which protocol is used to assign IP addresses dynamically?",
+        options: ["DNS", "DHCP", "FTP", "HTTP"],
+        answer: "DHCP"
     },
     {
-        question: "What is the use of the `render()` function in Django?",
+        question: "Which layer of the OSI model is responsible for data encryption?",
+        options: ["Network Layer", "Transport Layer", "Presentation Layer", "Application Layer"],
+        answer: "Presentation Layer"
+    },
+    {
+        question: "What is the difference between RAM and ROM?",
         options: [
-            "Redirecting users to another page",
-            "Sending raw HTTP responses",
-            "Rendering templates with context",
-            "Managing URL patterns"
+            "RAM is volatile, ROM is non-volatile",
+            "RAM is for permanent storage, ROM is temporary",
+            "Both are non-volatile",
+            "Both are volatile"
         ],
-        answer: "Rendering templates with context"
+        answer: "RAM is volatile, ROM is non-volatile"
     },
     {
-        question: "What is the role of the `views.py` file in Django?",
+        question: "What is a deadlock in operating systems?",
         options: [
-            "Defining how the application responds to user requests",
-            "Configuring database models",
-            "Setting up middleware",
-            "Storing static files"
+            "A state where processes wait indefinitely for resources",
+            "A crash of the operating system",
+            "An infinite loop in a process",
+            "A low-level hardware issue"
         ],
-        answer: "Defining how the application responds to user requests"
+        answer: "A state where processes wait indefinitely for resources"
     },
     {
-        question: "Which of the following is NOT a valid field type in Django models?",
-        options: ["CharField", "IntegerField", "EmailField", "JSONField"],
-        answer: "JSONField"
-    },
-    {
-        question: "What does the `@login_required` decorator do?",
+        question: "What is the function of DNS in networking?",
         options: [
-            "Restricts access to authenticated users",
-            "Applies middleware to a view",
-            "Defines URL routing",
-            "Enables session management"
+            "To translate domain names into IP addresses",
+            "To establish a secure connection",
+            "To assign MAC addresses to devices",
+            "To manage email servers"
         ],
-        answer: "Restricts access to authenticated users"
+        answer: "To translate domain names into IP addresses"
     },
     {
-        question: "Which command is used to create migrations in Django?",
+        question: "What is an algorithm?",
         options: [
-            "python manage.py migrate",
-            "python manage.py makemigrations",
-            "django-admin create-migrations",
-            "python manage.py syncdb"
+            "A programming language",
+            "A set of steps to solve a problem",
+            "A hardware component",
+            "An error in a program"
         ],
-        answer: "python manage.py makemigrations"
+        answer: "A set of steps to solve a problem"
     },
     {
-        question: "What is the default port used when running a Django development server?",
-        options: ["8000", "8080", "5000", "3000"],
-        answer: "8000"
-    },
-    {
-        question: "How can you serve static files in Django?",
+        question: "What does OOP stand for?",
         options: [
-            "Using the `STATICFILES_DIRS` setting",
-            "Using the `MEDIA_ROOT` setting",
-            "Directly referencing the file paths",
-            "By embedding in `views.py`"
+            "Object-Oriented Programming",
+            "Objective Programming",
+            "Operation-Oriented Programming",
+            "Object Programming"
         ],
-        answer: "Using the `STATICFILES_DIRS` setting"
+        answer: "Object-Oriented Programming"
     },
     {
-        question: "What is the purpose of `csrf_token` in Django templates?",
+        question: "Which programming paradigm is used in C?",
+        options: ["Object-Oriented", "Functional", "Procedural", "Logical"],
+        answer: "Procedural"
+    },
+    {
+        question: "What does the 'Big O' notation represent?",
         options: [
-            "To enable secure file uploads",
-            "To protect against CSRF attacks",
-            "To handle form validations",
-            "To debug template rendering"
+            "The memory usage of an algorithm",
+            "The runtime complexity of an algorithm",
+            "The number of variables in a program",
+            "The storage requirements for an algorithm"
         ],
-        answer: "To protect against CSRF attacks"
+        answer: "The runtime complexity of an algorithm"
     },
     {
-        question: "Which Django ORM method is used to retrieve all objects from a model?",
-        options: ["objects.all()", "objects.filter()", "objects.get()", "objects.select()"],
-        answer: "objects.all()"
-    },
-    {
-        question: "What does the `Django Admin` interface provide?",
+        question: "What is a cache in computer systems?",
         options: [
-            "An interface for managing models and data",
-            "A GUI for writing Python code",
-            "A tool for database optimization",
-            "A debugger for Django projects"
+            "Temporary storage for frequently accessed data",
+            "A permanent database",
+            "A hardware driver",
+            "An encrypted storage area"
         ],
-        answer: "An interface for managing models and data"
+        answer: "Temporary storage for frequently accessed data"
     },
     {
-        question: "What is the extension of a Django template file?",
-        options: [".html", ".django", ".tpl", ".template"],
-        answer: ".html"
+        question: "Which of the following is a lossless compression algorithm?",
+        options: ["JPEG", "MP3", "PNG", "MPEG"],
+        answer: "PNG"
     },
     {
-        question: "Which of the following is used to inherit templates",
+        question: "What is the default port for HTTP?",
+        options: ["22", "80", "443", "25"],
+        answer: "80"
+    },
+    {
+        question: "What is a 'node' in a linked list?",
         options: [
-            "{%inherit base%}",
-            "{%include base%}",
-            "{%exclude base%}",
-            "{%extends base%}"
+            "A point in a graph",
+            "An element containing data and a reference to the next node",
+            "A hardware component",
+            "A storage unit"
         ],
-        answer: "{%extends base%}"
+        answer: "An element containing data and a reference to the next node"
     },
     {
-        question: "Which statement will render variable in Django?",
-        options: ["{var}", "{{%var%}}", "var", "{{var}}"],
-        answer: "{{var}}"
-    },
-    {
-        question: "How do you run a Django project on a different port?",
+        question: "What is the purpose of a firewall in networking?",
         options: [
-            "python manage.py runserver 8080",
-            "python manage.py startproject 8080",
-            "django-admin runserver 8080",
-            "python manage.py devserver 8080"
+            "To secure a network by controlling incoming and outgoing traffic",
+            "To speed up internet browsing",
+            "To manage data compression",
+            "To convert IP addresses to MAC addresses"
         ],
-        answer: "python manage.py runserver 8080"
+        answer: "To secure a network by controlling incoming and outgoing traffic"
+    },
+    {
+        question: "What is recursion in programming?",
+        options: [
+            "A function calling itself",
+            "A loop inside a loop",
+            "A syntax error",
+            "An algorithm running infinitely"
+        ],
+        answer: "A function calling itself"
+    },
+    {
+        question: "What does 'SQL injection' refer to?",
+        options: [
+            "A vulnerability in databases",
+            "A method for optimizing queries",
+            "A tool for database migration",
+            "A programming paradigm"
+        ],
+        answer: "A vulnerability in databases"
+    },
+    {
+        question: "What is the difference between a stack and a queue?",
+        options: [
+            "Stack is LIFO, queue is FIFO",
+            "Queue is LIFO, stack is FIFO",
+            "Both use LIFO",
+            "Both use FIFO"
+        ],
+        answer: "Stack is LIFO, queue is FIFO"
+    },
+    {
+        question: "What is the primary purpose of a compiler?",
+        options: [
+            "To execute code",
+            "To translate source code into machine code",
+            "To debug programs",
+            "To manage runtime errors"
+        ],
+        answer: "To translate source code into machine code"
+    },
+    {
+        question: "What does the 'ping' command do?",
+        options: [
+            "Measures network latency",
+            "Establishes a secure connection",
+            "Retrieves DNS records",
+            "Compresses data"
+        ],
+        answer: "Measures network latency"
+    },
+    {
+        question: "What is a 'foreign key' in a database?",
+        options: [
+            "A key linking two tables",
+            "A key that encrypts data",
+            "A key for indexing",
+            "A unique identifier for rows"
+        ],
+        answer: "A key linking two tables"
+    },
+    {
+        question: "What is the primary purpose of RAM?",
+        options: [
+            "To provide temporary data storage for active processes",
+            "To store data permanently",
+            "To process instructions",
+            "To manage hardware components"
+        ],
+        answer: "To provide temporary data storage for active processes"
     }
 ];
+
+// JavaScript to prevent copying original content and replace with a custom message
+document.addEventListener('copy', function (event) {
+    event.preventDefault(); // Prevent the default copy action
+    const customMessage = "BHAI Mehanat Karle, Kyu kr raha hai ye sb ?";
+    
+    // Set the custom message in the clipboard
+    if (event.clipboardData) {
+        event.clipboardData.setData('text/plain', customMessage);
+    } else if (window.clipboardData) { // For older IE browsers
+        window.clipboardData.setData('Text', customMessage);
+    }
+    
+    alert(customMessage); // Notify the user
+});
 
 
 let currentQuestionIndex = 0;
