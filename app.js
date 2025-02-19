@@ -323,6 +323,8 @@ nextButton.addEventListener("click", () => {
 
 function displayResult() {
     document.getElementById("quiz-box").style.display = "none";
+    const webcamPreview = document.getElementById('webcam-container');
+    webcamPreview.style.display = "none"
     resultDiv.innerHTML = `
         <div class="result-container">
             <h2>🎉 Quiz Completed! 🎉</h2>
